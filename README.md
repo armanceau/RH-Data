@@ -1,12 +1,12 @@
-# RH-Data
+# 👨‍💻 RH-Data
 Projet de big data
 
 
-## Objectifs : 
+## 🎯 Objectifs : 
 
 _TODO_
 
-## Structure du projet
+## 🔗 Structure du projet
 
 Le projet est organisé en trois scripts principaux :
 
@@ -18,13 +18,13 @@ Les fichiers CSV sont traités dans les répertoires suivants :
 - **Silver Path** : `../ds-silver/`
 - **Gold Path** : `../ds-gold/`
 
-## Prérequis
+## 🛠️ Prérequis
 
 ```bash
 pip install deltalake
 ```
 
-## Lancer le projet
+## 🚀 Lancer le projet
 
 ```bash
 cd scripts
