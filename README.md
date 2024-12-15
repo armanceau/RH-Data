@@ -4,7 +4,8 @@ Projet de big data
 
 ## 🎯 Objectifs : 
 
-_TODO_
+_L'objectif est d’étudier l'impact du niveau d'étude, de l'expérience, de la mobilité géographique et de l'influence familiale sur la satisfaction au travail et les opportunités professionnelles, en identifiant les leviers d'action prioritaires._
+
 
 ## 🔗 Structure du projet
 
