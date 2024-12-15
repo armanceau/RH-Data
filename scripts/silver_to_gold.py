@@ -1,6 +1,7 @@
-import pandas as pd
 import os
+import pandas as pd
 import numpy as np
+from deltalake.writer import write_deltalake
 
 SILVER_PATH = "../ds-silver/"
 GOLD_PATH = "../ds-gold/"
@@ -10,7 +11,7 @@ os.makedirs(GOLD_PATH, exist_ok=True)
 silver_files = os.listdir(SILVER_PATH)
 
 for file in silver_files:
-    if file.endswith(".csv"):
+    if file.endswith(".csv"):  
         print(f"Traitement du fichier : {file}")
         
         df = pd.read_csv(f"{SILVER_PATH}/{file}")
@@ -44,5 +45,7 @@ for file in silver_files:
             prob_career_change = df['Career Change'].mean()
             df['P(Career Change)'] = prob_career_change
 
-        df.to_csv(f"{GOLD_PATH}/{file}", index=False)
-        print(f"Fichier enrichi sauvegardé : {file}")
+        delta_path = f"{GOLD_PATH}/{file.replace('.csv', '')}"
+
+        write_deltalake(delta_path, df)
+        print(f"Fichier enrichi sauvegardé au format Delta : {delta_path}")
